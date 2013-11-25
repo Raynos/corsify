@@ -49,7 +49,12 @@ function Corsify(opts, handler) {
 
 function isOptions(opts) {
     return "endOptions" in opts ||
-        "getOrigin" in opts
+        "getOrigin" in opts ||
+        "Access-Control-Allow-Origin" in opts ||
+        "Access-Control-Allow-Methods" in opts ||
+        "Access-Control-Allow-Credentials" in opts ||
+        "Access-Control-Max-Age" in opts ||
+        "Access-Control-Allow-Headers" in opts
 }
 
 function addCrossDomainHeaders(req, res, opts) {
