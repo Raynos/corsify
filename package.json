@@ -1,6 +1,6 @@
 {
   "name": "corsify",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "CORS up a route handler",
   "keywords": [],
   "author": "Raynos <raynos2@gmail.com>",
