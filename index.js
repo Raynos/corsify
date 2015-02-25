@@ -62,9 +62,8 @@ function addCrossDomainHeaders(req, res, opts) {
         opts.getOrigin(req, res) :
         opts["Access-Control-Allow-Origin"] || req.headers.origin
 
-    res.setHeader("Access-Control-Allow-Origin", origin)
-
     if (origin) {
+        res.setHeader("Access-Control-Allow-Origin", origin)
         res.setHeader("Access-Control-Allow-Methods",
             opts["Access-Control-Allow-Methods"] ||
                 "POST, GET, PUT, DELETE, OPTIONS, XMODIFY")
